@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip on Click</title>
+    <style>
+        .flip-container {
+            perspective: 1000px;
+            width: 600px;
+            height: 600px;
+        }
+
+        .flip-box {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .flip-box.flip {
+            transform: rotateX(180deg);
+        }
+
+        .flip-front, .flip-back {
+            width: 300px;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .flip-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flip-back {
+            transform: rotateX(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="flip-container">
+        <div class="flip-box">
+            <div class="flip-front">
+                <img src="./images/AirPods/AirPods_1-1.png" alt="1">
+                <div class="Text">
+                    <p class="red">무료 각인</p>
+                    <h2>AirPods Max 구입하기</h2>
+                    <p class="Price">₩769,000</p>
+                </div>
+            </div>
+            <div class="flip-back">
+                <img src="./images/AirPods/1-2.JPG" alt="1">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const flipBox = document.querySelector('.flip-box');
+
+        flipBox.addEventListener('click', function() {
+            flipBox.classList.toggle('flip');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Swiper Combined Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Combined styles -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+    <style>
+        /* Common Styles */
+        html,
+ body {
+   position: relative;
+   height: 1900px;
+   background: #eee;
+   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+   font-size: 14px;
+   color: #000;
+   margin: 0;
+   padding: 0;
+ }
+
+ /* .inner .img {
+    width: 400px;
+   margin-top: 50px;
+    max-width: 100%;
+ } */
+ .swiper-slide img {
+   width: 100%;
+   object-fit: cover;
+    max-width: 100%;
+    margin-bottom: 200px;
+ }
+
+.practice-style.swiper {
+   margin: 20px 0;
+   width: 1500px;
+   height: 500px;
+ } 
+
+ .practice-style.swiper-slide {
+   border-radius: 20px;
+   text-align: center;
+   font-size: 18px;
+   background: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+ }
+
+        .flip-box {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .inners>.img{
+  width: 350px;
+}
+#flip-front img {
+  margin-top: 150px;
+  width: 230px;
+    border: solid 1px red ;
+}
+        #flip-back img {
+            margin-top: 100px;
+  width: 250px;
+        }
+        .flip-box.flip {
+            transform: rotateY(180deg);
+        }
+
+        #flip-front, #flip-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        #flip-front {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #flip-back {
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+.Button01,
+.Button02,
+.Button03 {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-repeat: no-repeat;
+   border: none;
+ }
+
+
+ .Button01 {
+   background-color: #345B73;
+      position: absolute; /* 절대 위치 지정 */
+   top: 450px; /* 원하는 상단 여백 */
+   right: 150px; /* 원하는 오른쪽 여백 */
+ }
+
+ .Button02 {
+   background-color: #0D0D0D;
+      position: absolute; /* 절대 위치 지정 */
+   top: 450px; /* 원하는 상단 여백 */
+   right: 130px; /* 원하는 오른쪽 여백 */
+ }
+
+ .Button03 {
+   background-color: #D9B1AD;
+      position: absolute; /* 절대 위치 지정 */
+   top: 450px; /* 원하는 상단 여백 */
+   right: 110px; /* 원하는 오른쪽 여백 */
+ }
+ #flip-back button {
+    display: none; 
+}
+
+#flip-front button {
+    display: block; 
+}
+        </style>
+</head>
+
+<body>
+    <div class="Title">
+        <p class="Blue">Accessory</p>
+        <p>액세서리. <span>즐겨 사용하는 기기들과 완벽하게 페어링되는 여러 가지 필수품.</span></p>
+    </div>
+    <!-- practice.html Swiper -->
+    <div class="swiper mySwiper practice-style">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide practice-style">
+                <img src="./images/AirPods/000.png" style="width: 200px; margin-bottom: 50px; margin-left: 10px;  max-width: 100%;" />
+            </div>
+            <div class="swiper-slide practice-style">
+                    <div class="flip-box">
+                        <div id="flip-front">
+                            <img src="./images/AirPods/01-1.png"  />
+                        </div>
+                        <div id="flip-back">
+                            <img src="./images/AirPods/0000000.png" style="margin-top: 35px;" />
+                        </div>
+                    </div>
+                </div>
+            <div class="swiper-slide practice-style">
+                <div class="flip-box">
+                    <div id="flip-front">
+                        <img src="./images/AirPods/02-1.png" />
+                    </div>
+                    <div id="flip-back">
+                        <img src="./images/AirPods/airpro2-2.png" style="margin-top: 130px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide practice-style">
+                <div class="flip-box">
+                    <div id="flip-front">
+                        <img src="./images/AirPods/03-1.png"/>
+                    </div>
+                    <div id="flip-back">
+                        <img src="./images/AirPods/AirPods_3-2.png" style="margin-top: 70px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide practice-style">
+              <div class="flip-box">
+                <div id="flip-front">
+                  <div id="imageContainers01" class="inners">
+                    <img id="image01" src="./images/AirPods/04-1.png" alt="이미지 1" class="img">
+                    <img id="image02" src="./images/AirPods/04-2.png" alt="이미지 2" class="img">
+                    <img id="image03" src="./images/AirPods/04-3.png" alt="이미지 3" class="img">
+                  </div>
+                </div>
+                <div id="flip-back">
+                  <img src="./images/AirPods/4-4.png"  />
+                </div>
+              </div>
+              <button data-image="image01" class="Button01"></button>
+              <button data-image="image02" class="Button02"></button>
+              <button data-image="image03" class="Button03"></button>
+                </div>
+            </div>
+
+        
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script>
+           
+           var swiper = new Swiper(".mySwiper.practice-style", {
+  spaceBetween: 10,
+  slidesPerView: 5,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    type: "fraction",
+    clickable: true,
+    },
+  
+  breakpoints: {
+    // 화면의 넓이가 320px 이상일 때
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 5,
+    },
+    // 화면의 넓이가 640px 이상일 때
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1300: {
+      slidesPerView: 5,
+      spaceBetween: 10,
+    },
+  },
+});
+  
+const flipBoxes = document.querySelectorAll('.flip-box');
+
+flipBoxes.forEach(function(flipBox) {
+    flipBox.addEventListener('click', function() {
+        flipBox.classList.toggle('flip');
+    });
+});
+
+const imageContainers01 = document.getElementById("imageContainers01");
+const buttons01 = document.querySelectorAll(".Button01, .Button02, .Button03");
+
+function hideAllImages01() {
+  imageContainers01.querySelectorAll("img").forEach((image) => {
+    image.style.display = "none";
+  });
+}
+
+hideAllImages01();
+
+const firstImage01 = document.getElementById("image01");
+firstImage01.style.display = "block";
+
+buttons01.forEach((button) => {
+  button.addEventListener("click", () => {
+    hideAllImages01();
+    const imageId = button.getAttribute("data-image");
+    const targetImage = document.getElementById(imageId);
+    targetImage.style.display = "block";
+  });
+});
+
+
+
+    </script>
+</body>
+
+</html>
